@@ -4,11 +4,11 @@
     "connector.class": "com.clickhouse.kafka.connect.ClickHouseSinkConnector",
     "tasks.max": "1",
     "topics": "postgres_cdc.test_db.users,postgres_cdc.test_db.orders",
-    "hostname": "ijhawon3za.us-east1.gcp.clickhouse.cloud",
+    "hostname": "<ur hostname>",
     "port": "8443",
     "database": "test_db",
     "username": "default",
-    "password": "h_sgHJbgYwN9G",
+    "password": "<pass of clickhouse cluster >",
     "ssl": "true",
     "errors.tolerance": "all",
     "errors.log.enable": "true",
@@ -19,6 +19,6 @@
     "key.converter.schemas.enable": "false",
     "value.converter.schemas.enable": "false",
     "consumer.override.auto.offset.reset": "earliest",
-    "consumer.override.group.id": "clickhouse-fresh-$(date +%s)"
+    "consumer.override.group.id": "clickhouse-$(date +%s)"
   }
 }
